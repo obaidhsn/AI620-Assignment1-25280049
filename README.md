@@ -57,7 +57,7 @@ To obtain a Kaggle API token:
 - Scroll to "API" section
 - Click "Generate New Token" to get the API Key
 
-## Running the Pipeline
+## Running the Extraction Pipeline
 
 Execute the pipeline to extract and process data:
 
@@ -70,6 +70,15 @@ This will:
 - Process and transform the data
 - Store results in the `data/processed` directory
 
+## Running the Transformation Pipeline
+The transformation code is in transformation_pipeline.ipynb with every cell defined.
+It works on two datasets, API AI Data, and Kaggle AI Data.
+It contains complete pipelines for:
+- Data Quality Assessment
+- Transformation and Cleaning
+- Exploratory Analysis and Visualization
+The cleaned data is saved in /data/cleaned.
+
 ## Project Structure
 
 ```
@@ -80,7 +89,7 @@ data-engineering-elt-pipeline/
 ├── data/
 │   ├── raw/             # Raw extracted data
 │   └── processed/       # Processed data
-│   └── transformed/     # Transformed data
+│   └── cleaned/         # Cleaned data
 ├── config.py            # Configuration settings
 ├── paths.py             # Path definitions
 ├── run_extraction_pipeline.py      # Main pipeline execution script
@@ -91,4 +100,4 @@ data-engineering-elt-pipeline/
 ## Output
 - Raw data is saved in `data/raw/<date>/`. 
 - Processed data is saved in `data/processed/` in both CSV and JSON formats.
-- Transformed data is saved in `data/transformed/`. 
+- Transformed/Cleaned data is saved in `data/cleaned/`. 
